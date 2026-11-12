@@ -14,6 +14,7 @@
 !/tools/
 !/notes/
 !/examples/
+!/docs/
 
 # ---- 目录内再全忽略，只放行指定文件 ----
 /tools/*
@@ -56,6 +57,10 @@
 
 # 样本：整目录放行
 !/examples/**
+
+# README 插图（由 out/_make_pipeline.py 生成，源素材全在 examples/ 里）
+/docs/*
+!/docs/pipeline-sop1.png
 
 # ---- 兜底：任何位置都不要再收这些东西 ----
 __pycache__/
