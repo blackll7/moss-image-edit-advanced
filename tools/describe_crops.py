@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""对 grounding 裁出来的每块图做详细反写，产出 A+B 链的 --region-prompt 草稿。
+r"""对 grounding 裁出来的每块图做详细反写，产出 A+B 链的 --region-prompt 草稿。
 
 前置：先跑 `tools/ground_regions.py` 得到 `grounding.json` 与各块 png。
 

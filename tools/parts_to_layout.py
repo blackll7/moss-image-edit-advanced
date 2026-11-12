@@ -63,9 +63,9 @@ def main():
     ap.add_argument("--canvas", default="1216x1632")
     ap.add_argument("--fully", default="", help="逗号分隔，覆盖默认的 fully 集合")
     ap.add_argument("--skip", default="", help="逗号分隔，跳过的 id（如 sleeve_l）")
-    ap.add_argument("--min-area", type=float, default=0.3, help="面积%低于此值跳过")
+    ap.add_argument("--min-area", type=float, default=0.3, help="面积%%低于此值跳过")
     ap.add_argument("--max-area", type=float, default=0.0,
-                    help="面积%高于此值按比例缩到该值（0=不限）；用于压 drape/legs 的渗漏")
+                    help="面积%%高于此值按比例缩到该值（0=不限）；用于压 drape/legs 的渗漏")
     ap.add_argument("--summary", default="", help="layout 的 summary")
     ap.add_argument("--pretty", action="store_true")
     a = ap.parse_args()
