@@ -20,6 +20,7 @@
 | Pillow | 13.0.0 |
 | numpy | 2.5.4 |
 | opencv-python | 仅 `tools/depth_to_mask.py` 需要 |
+| transformers | 仅 `tools/depth_from_image.py` 需要（会拉 `depth-anything/Depth-Anything-V2-Small-hf`） |
 | MOSS-Image + ComfyUI | 不在本仓库，需自行部署（本机在 `C:\MOSS-Deploy\`） |
 
 脚本里的 `C:\MOSS-Deploy\…` 是原机器的部署路径，换机器时改这些常量即可。涉及视觉模型反写的脚本（`ground_regions` / `describe_*` / `region_ask`）需要能访问对应的模型服务。
@@ -158,6 +159,7 @@ README.md        逐档量化数据与踩坑记录
 | `pick_parts.py` | `--parts` `--ref` | `--w` `--h` `--prefix` `--max` |
 | `depth_to_mask.py` | `<输入>` `<输出前缀>` | `--width` `--height` `--feather` `--roi` `--keep-floor` |
 | `clean_depth.py` | `--depth` | `--ref` `--out` |
+| `depth_from_image.py` | `<输入>` `<输出>` | 无（位置参数，模型固定 `Depth-Anything-V2-Small`） |
 | `detail_colormap.py` | `--parts` | `--picked` `--input-dir` `--out-colormap` `--out-prompts` |
 
 全部支持 `--help`。
@@ -168,7 +170,7 @@ README.md        逐档量化数据与踩坑记录
 
 - MOSS-Image 模型、ComfyUI 部署、`moss_run.py` / `moss_main.py`
 - 参考图、素材库、训练集、过程稿
-- 三个 SOP 里引用的规则文档（`notes/规则-*.md`）与经验卡 —— 那是工作区的内部资产，需要时另行同步
+- **延伸阅读文档**：本仓库只收了三个 SOP **直接点名**的文档（15 个 notes md）。这些文档自己还会引用更多笔记（实测三层引用链上有 15 个指向本仓库外），逐条补会滚雪球，所以没全收。遇到 SOP 里提到但仓库里没有的 `.md`，那是工作区内部文档，按文件名到 `notes/` 取。
 
 ---
 

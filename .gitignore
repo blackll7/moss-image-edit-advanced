@@ -27,20 +27,32 @@
 !/tools/parts_to_layout.py
 !/tools/pick_parts.py
 !/tools/depth_to_mask.py
+!/tools/depth_from_image.py
 !/tools/clean_depth.py
 !/tools/detail_colormap.py
 
 /notes/*
+# GrabTag 三类文档
 !/notes/手册-GrabTag.md
 !/notes/手册-GrabTag-使用.md
 !/notes/机制-GrabTag-当前实现.md
 !/notes/机制-三个定位系统-GrabTag-layout-色图.md
 !/notes/流程-GrabTag两步生成-锁定版.md
 !/notes/2026-11-10-GrabTag-ref_tag-可见细节写法.md
+# region prompt
 !/notes/手册-region-prompt.md
+# 三个 SOP
 !/notes/SOP-1-原图复刻流程.md
 !/notes/SOP-2-原图调整流程.md
 !/notes/SOP-3-更换姿势流程.md
+# 三个 SOP 里直接点名的参考文档（不带这些，SOP 的文字引用会指空）
+!/notes/手册-PromptEnhancer.md
+!/notes/约定-GrabTag终版.md
+!/notes/SOP-三步出图.md
+!/notes/2026-11-11-经验-色图与深度图共享strength导致多主体.md
+!/notes/2026-11-12-经验-色图区数上限-不重叠部位数.md
+# 说明：这些文档自己还会引用更多 notes（逐条补会滚雪球），其余未收录，
+# 需要时请到工作区 notes/ 取；README 的「依赖（不在本仓库）」一节已注明。
 
 # 样本：整目录放行
 !/examples/**
@@ -52,6 +64,7 @@ __pycache__/
 *.bak-*
 *.bak_*
 _bak_*
+*.reordered.md
 *.safetensors
 *.ckpt
 *.pt

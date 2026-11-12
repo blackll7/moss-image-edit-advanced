@@ -317,7 +317,7 @@ cm[shoe] = (255,0,0)
 ### 2.2 提第二深度图
 
 ```powershell
-& 'C:\MOSS-Deploy\venv\Scripts\python.exe' 'C:\MOSS-Deploy\work\depth_from_image.py' `
+& 'C:\MOSS-Deploy\venv\Scripts\python.exe' 'tools\depth_from_image.py' `
     '过渡图.png' 'C:\MOSS-Deploy\ComfyUI\input\s3_depth2.png'
 ```
 
@@ -564,7 +564,7 @@ line = ('the %s area is <%s>, %s; its shape is: %s. '
 | 第 0 步 | `s4_black.png`（`depth_to_mask.py` 输出） | Otsu `118.0`、地面过滤 `y>=1403` 把 `448797→275652`、人物 **11.79%**、bbox `x 211-1006 y 84-1498`（两只脚都在）、四角全 0 |
 | 第 1 步 | `s4_t2_00001_.png` | `--control-strength 0.6 --control-end 0.6`，0.24 min；抬腿裤管在髋与大腿堆厚褶、站立腿下坠堆褶、红披风滑落、11 色全中 |
 | 第 2.1 步 | `s4_cm.png`（10 区） | `leggings 8.05%` / `drape 6.20%` / `veil 1.25%` / `sash_point 0.91%` / `bodice 0.85%` / `sleeve_r 0.84%` / `sash 0.60%` / `sleeve_l 0.52%` / `shoes 0.42%` / `orb 0.23%`，中灰底 80.12% |
-| 第 2.2 步 | `s4_depth2.png` | `depth_from_image.py`（**位置参数** `sys.argv[1]`/`[2]`）+ 浅阈值刷黑，四角 0 |
+| 第 2.2 步 | `s4_depth2.png` | `tools/depth_from_image.py`（**位置参数** `sys.argv[1]`/`[2]`）+ 浅阈值刷黑，四角 0 |
 | 第 3 步 | `s4_v17_v14plus_00001_.png` | 1.30 min；`0.9 / end 1.0 / image-strength 0.5`；五块 prompt + region 前形状后细节 |
 
 **色图的四个坑（HSV 分区时必踩）**
