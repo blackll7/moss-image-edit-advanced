@@ -102,6 +102,18 @@ def main():
     ap.add_argument("--out-selection", default="")
     args = ap.parse_args()
 
+    # ---- --shape-source 与默认的 nonwhite 冲突时不再静默忽略 ----
+    # 2026-11-12 修：原先 if nonwhite / elif shape_source 的顺序会让「传了 shape_source
+    # 但没显式改 shape_mode」的情况下，shape_source 被完全吞掉、且不打印任何提示。
+    # 用户显式给出形状来源就是想要它，所以自动切到 palette 模式。
+    if args.shape_source and args.shape_mode == "nonwhite":
+        print("[shape] 传了 --shape-source，自动从 nonwhite 切到 palette 模式")
+        print("[shape]   （原行为会静默忽略 --shape-source，本次修正为显式生效）")
+        args.shape_mode = "palette"
+    if args.shape_mode == "palette" and not args.shape_source:
+        print("❌ --shape-mode palette 需要 --shape-source（部位色图，如 cm_trans8.png）")
+        return 2
+
     from PIL import Image
 
     parts = load_parts(args.parts)
