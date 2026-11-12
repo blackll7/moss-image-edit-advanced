@@ -95,6 +95,48 @@ Do not draw any of these parts as separate objects beside the figure; each is wo
 - **`--image-strength`**：参考整体权重。1.0 时参考的装饰容易溢出成「画面旁边多画一个挂坠」这类拼贴；0.5 附近可压到 0.00%（实测）。
 - **8 块上限**：不是软件限制，和 region prompt 的色区上限是同一件事 —— **互不重叠的部位数**决定能分几块。
 
+### 参考图 OOM：`MOSS_NO_REF_PRECOMPUTE=1`
+
+GrabTag 一次要送 8 张裁片进去。裁片本身不大（512 边 ≈ 1,024 tok，8 张约 8k tok），但**参考图一旦是原尺寸，就会撞上 MOSS 的参考 KV 预计算** —— 这一层会把进程直接打死。而且它不是抛 Python 异常，是**画面消失**。
+
+**根因不是「图像太大」，是「参考 KV 被提前物化成常驻缓存」**（`comfy/model_base.py:2963-2965` 注释原文）：
+
+```
+kv = x.new_empty((B, len(layers), 2) + x.shape[1:])
+   = 28 层 × 2(K/V) × n_ref × 4096 × 2 B ≈ 0.44 MiB / token
+   7232 tok → 3.2 GiB；16320 tok → 7.5 GiB（8 GB 必爆）
+```
+
+症状是 KSampler 阶段报 `Allocation on device 0 would exceed allowed memory … Requested 3~8 GiB`，或者干脆不报错、进程直接消失。
+
+**两道防线，都在 `preprocess_refs()` **之前**生效**：
+
+| 环境变量 | 作用 | 默认 |
+|---|---|---|
+| `MOSS_NO_REF_PRECOMPUTE=1` | **跳过预计算**，把 `ref_latents` 透传给 `_forward` 每步现算 | **`1`（2026-11-09 起默认开）** |
+| `MOSS_REF_POOL=2` | 先把参考 latent 池化 N 倍，`n_ref` 除以 N² | `0`（关） |
+
+实测（1216×1632 画布 + 全尺寸参考 ≈ 7,752 tok）：
+
+| 配置 | 结果 |
+|---|---|
+| 默认（预计算） | 进程消失，连崩两次 |
+| `MOSS_NO_REF_PRECOMPUTE=1` | **成功，61 s**，细节最全（不降采样） |
+
+开着时的启动日志会打印：
+
+```
+[moss-ref] precompute OFF (MOSS_NO_REF_PRECOMPUTE=1) -> ref_latents passthrough
+```
+
+**三个容易踩的点**：
+
+1. **改错文件无效**。必须改 `comfy/model_base.py`。改 `comfy/ldm/moss_image/model.py` 内部**不会生效** —— 那条路上 `ref_kv` 已经算好了，进不去（曾连续四次补丁全灭就是这个原因）。
+2. **它不只是排查开关，它就是更好的默认**。预计算把 28 层 KV 全部物化并常驻（7.5 GiB）；现算每步只算当前层、用完即弃，峰值 ≈ 单层量 × 常数。
+3. **`MOSS_REF_POOL` 是降分辨率的路线**。它靠池化换显存，代价是高频细节。**能开 `MOSS_NO_REF_PRECOMPUTE` 就别用池化**。
+
+想回到旧行为（预计算）就显式设 `MOSS_NO_REF_PRECOMPUTE=0`，但除非在排查，没必要。
+
 ### 四条硬性要求（违反的后果都有实测）
 
 | 要求 | 违反的后果 |
