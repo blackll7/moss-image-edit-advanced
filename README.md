@@ -35,6 +35,23 @@
 
 ---
 
+## About
+
+*English summary — the rest of this document is Chinese.*
+
+Two advanced tools for MOSS-Image that go beyond what plain image-edit and bbox layout can express:
+
+- **GrabTag** cuts a reference image into named crops and binds each crop to a canvas region. A part is only read from the reference when your prompt names it — no global "look like this image" bleed.
+- **region prompt** gives every region its own sentence, so "what this patch of canvas looks like" becomes an explicit per-region instruction instead of one global paragraph.
+
+Both are drop-in **upper replacements**: GrabTag replaces feeding a whole reference image into the image-edit path; region prompt replaces layout bboxes (which can only draw rectangles).
+
+Three SOPs — replicate an outfit, swap a single part, change the pose — ship as step-by-step walkthroughs with real examples under `examples/`.
+
+Unlike LoRA-based approaches, **nothing has to be loaded**: no LoRA, no adapter, no fine-tune. Style comes from the base model plus your prompt, so the same reference can be re-skinned without dragging a training set's aesthetic along. That also means **higher freedom and a higher ceiling** — and, honestly, a **steeper learning curve**: you have to decide the regions, write one caption per region, and supply depth yourself.
+
+---
+
 ## GrabTag：把参考图的部位绑到画布上
 
 ### 一句话
