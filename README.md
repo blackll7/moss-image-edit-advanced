@@ -35,36 +35,6 @@
 
 ---
 
-## Case SOP-1 — 单段复刻，参考与输出同尺寸
-
-[![SOP-1 pipeline：参考 → 11 裁片 → 深度 → 输出](docs/pipeline-sop1.png)](examples/SOP-1-20261112-四星2冰蓝舞娘/README.md)
-
-*单段生成，没有二次修图：**参考图**（按输出尺寸送入，所以纹样能活下来）→ **GrabTag 裁片**（11 个部件，每个一个 `ref_tag`）→ **姿势深度**（只给轮廓）→ **输出** 1216×1632，24 步、cfg 3.5。*
-
-完整走查见 [`examples/SOP-1-20261112-四星2冰蓝舞娘`](examples/SOP-1-20261112-四星2冰蓝舞娘/README.md) · 流程文档 [`notes/SOP-1-原图复刻流程.md`](notes/SOP-1-原图复刻流程.md) · region 文案 [`notes/手册-region-prompt.md`](notes/手册-region-prompt.md) · 参考图 OOM 防线见下文 [`MOSS_NO_REF_PRECOMPUTE`](#参考图-oommoss_no_ref_precompute1)
-
----
-
-## Case SOP-2 — 只换一块：灯笼裤化成冰
-
-[![SOP-2 pipeline：原参考图 → 7 裁片（换 1 张）→ 3 区色图 → 冰衣产物](docs/pipeline-sop2.png)](examples/SOP-2-20261112-四星2冰衣-24step/README.md)
-
-*输入就是那张参考图：**参考侧**只把 `legs` 的裁片换成冰衣、其余 6 张原样；**画布侧** 3 区色图与 2 句文案原样，只把 `<|legs|>` 那句改写成「冰与水」；另外加一盏冬季侧光 25°。三个最容易写错的地方：裤子不是「变成冰」而是 **`no cloth at all`**；冰要透明到能看见腿，白色只留在断面的薄边；裤脚那圈深紫蓝菱形片与金边**仍然是硬的**。*
-
-完整走查见 [`examples/SOP-2-20261112-四星2冰衣-24step`](examples/SOP-2-20261112-四星2冰衣-24step/README.md) · 流程文档 [`notes/SOP-2-原图调整流程.md`](notes/SOP-2-原图调整流程.md)
-
----
-
-## Case SOP-3 — 换姿势：两条平行支线，第 3 步才汇合
-
-[![SOP-3 pipeline：两条平行支线汇合到定稿](docs/pipeline-sop3.png)](examples/SOP-3-20261112-四星2-standing-split/README.md)
-
-*两条线互不依赖。**上支线**只做一件事 —— 把原参考图按部位切成 8 张裁片（只跟「长什么样」有关）。**下支线**也只做一件事 —— 把新姿势落成一张过渡图、再从它自己身上提色图与第二深度图（只跟「在哪里」有关）。直到第 3 步，8 张裁片 + 色图（定位置）+ 第二深度图（定姿势）才第一次相遇。几何全部来自深度图，参考通道只借外观、不借位置。*
-
-完整走查见 [`examples/SOP-3-20261112-四星2-standing-split`](examples/SOP-3-20261112-四星2-standing-split/README.md) · 流程文档 [`notes/SOP-3-更换姿势流程.md`](notes/SOP-3-更换姿势流程.md)
-
----
-
 ## GrabTag：把参考图的部位绑到画布上
 
 ### 一句话
@@ -357,6 +327,34 @@ SOP-3 的几何**全部来自新深度图** —— 参考通道只借「长什�
 
 > 这三张图可以直接对照 `notes/SOP-3-更换姿势流程.md` 的第 1 / 2 / 3 步命令看：
 > 第 1 步只传 `--depth-map`，第 2 步不提图只处理数据，第 3 步才把 8 张裁片一起挂上去。
+
+### Case SOP-1 — 单段复刻，参考与输出同尺寸
+
+[![SOP-1 pipeline：参考 → 11 裁片 → 深度 → 输出](docs/pipeline-sop1.png)](examples/SOP-1-20261112-四星2冰蓝舞娘/README.md)
+
+*单段生成，没有二次修图：**参考图**（按输出尺寸送入，所以纹样能活下来）→ **GrabTag 裁片**（11 个部件，每个一个 `ref_tag`）→ **姿势深度**（只给轮廓）→ **输出** 1216×1632，24 步、cfg 3.5。*
+
+完整走查见 [`examples/SOP-1-20261112-四星2冰蓝舞娘`](examples/SOP-1-20261112-四星2冰蓝舞娘/README.md) · 流程文档 [`notes/SOP-1-原图复刻流程.md`](notes/SOP-1-原图复刻流程.md) · region 文案 [`notes/手册-region-prompt.md`](notes/手册-region-prompt.md) · 参考图 OOM 防线见下文 [`MOSS_NO_REF_PRECOMPUTE`](#参考图-oommoss_no_ref_precompute1)
+
+---
+
+### Case SOP-2 — 只换一块：灯笼裤化成冰
+
+[![SOP-2 pipeline：原参考图 → 7 裁片（换 1 张）→ 3 区色图 → 冰衣产物](docs/pipeline-sop2.png)](examples/SOP-2-20261112-四星2冰衣-24step/README.md)
+
+*输入就是那张参考图：**参考侧**只把 `legs` 的裁片换成冰衣、其余 6 张原样；**画布侧** 3 区色图与 2 句文案原样，只把 `<|legs|>` 那句改写成「冰与水」；另外加一盏冬季侧光 25°。三个最容易写错的地方：裤子不是「变成冰」而是 **`no cloth at all`**；冰要透明到能看见腿，白色只留在断面的薄边；裤脚那圈深紫蓝菱形片与金边**仍然是硬的**。*
+
+完整走查见 [`examples/SOP-2-20261112-四星2冰衣-24step`](examples/SOP-2-20261112-四星2冰衣-24step/README.md) · 流程文档 [`notes/SOP-2-原图调整流程.md`](notes/SOP-2-原图调整流程.md)
+
+---
+
+### Case SOP-3 — 换姿势：两条平行支线，第 3 步才汇合
+
+[![SOP-3 pipeline：两条平行支线汇合到定稿](docs/pipeline-sop3.png)](examples/SOP-3-20261112-四星2-standing-split/README.md)
+
+*两条线互不依赖。**上支线**只做一件事 —— 把原参考图按部位切成 8 张裁片（只跟「长什么样」有关）。**下支线**也只做一件事 —— 把新姿势落成一张过渡图、再从它自己身上提色图与第二深度图（只跟「在哪里」有关）。直到第 3 步，8 张裁片 + 色图（定位置）+ 第二深度图（定姿势）才第一次相遇。几何全部来自深度图，参考通道只借外观、不借位置。*
+
+完整走查见 [`examples/SOP-3-20261112-四星2-standing-split`](examples/SOP-3-20261112-四星2-standing-split/README.md) · 流程文档 [`notes/SOP-3-更换姿势流程.md`](notes/SOP-3-更换姿势流程.md)
 
 ---
 
