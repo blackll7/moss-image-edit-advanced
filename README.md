@@ -28,7 +28,29 @@ GrabTag 吃的是**两张对齐到同一套几何的图**：
 
 **① 原图（参考图）—— 长什么样。** 按人体部位切成最多 8 块裁片，每块单独存成文件。最长边 512 就够，更大没用 —— vision 侧本来就缩到 384。
 
-**② 分割图（掩码）—— 每块裁片允许负责画面哪一块。** 同尺寸黑白图，白色 = 允许，黑色 = 不许。
+<img src="examples/SOP-1-20261112-四星2冰蓝舞娘/00-reference/ref.png" width="280">
+
+**② 分割图（掩码）—— 每块裁片允许负责画面哪一块。** 同尺寸黑白图，白色 = 允许，黑色 = 不许。下面以「腿」这一块为例：
+
+<table>
+<tr>
+<th align="center">裁片（长什么样）</th>
+<th align="center">掩码（能管画面哪儿）</th>
+</tr>
+<tr>
+<td><img src="examples/SOP-1-20261112-四星2冰蓝舞娘/02-grabtag/ex1_legs.png" width="240"></td>
+<td><img src="examples/SOP-1-20261112-四星2冰蓝舞娘/02-grabtag/ex1m_legs.png" width="240"></td>
+</tr>
+</table>
+
+同样一套「裁片 → 掩码」按部位各来一份，8 块就是 8 对：
+
+| 部位 | 裁片 | 掩码 |
+|---|---|---|
+| 胸衣 | <img src="examples/SOP-1-20261112-四星2冰蓝舞娘/02-grabtag/ex1_bodice.png" width="150"> | <img src="examples/SOP-1-20261112-四星2冰蓝舞娘/02-grabtag/ex1m_bodice.png" width="150"> |
+| 腰带 | <img src="examples/SOP-1-20261112-四星2冰蓝舞娘/02-grabtag/ex1_sash.png" width="150"> | <img src="examples/SOP-1-20261112-四星2冰蓝舞娘/02-grabtag/ex1m_sash.png" width="150"> |
+| 垂布 | <img src="examples/SOP-1-20261112-四星2冰蓝舞娘/02-grabtag/ex1_drape.png" width="150"> | <img src="examples/SOP-1-20261112-四星2冰蓝舞娘/02-grabtag/ex1m_drape.png" width="150"> |
+| 鞋 | <img src="examples/SOP-1-20261112-四星2冰蓝舞娘/02-grabtag/ex1_shoes.png" width="150"> | <img src="examples/SOP-1-20261112-四星2冰蓝舞娘/02-grabtag/ex1m_shoes.png" width="150"> |
 
 两张图分开保管、分开传参：
 
@@ -97,6 +119,19 @@ Do not draw any of these parts as separate objects beside the figure; each is wo
 **① 原图（参考图）—— 要复刻的那张。** 提供整体配色、纹样与服装结构。
 
 **② 色图 —— 一张和生成画布同尺寸的 PNG**，用纯色块把画面划成若干区域。每个色块对应「一块布 / 一个部位」，颜色本身**只当 ID 用**，模型不会把颜色画出来（实测 9 区混用色板，生成图里落在色板色 ±40 内的像素占比 **0.000%**）。
+
+下面这一对取自 SOP-3 的中间产物：左边是第 1 步产出的过渡图，右边是从它按色号提取出的 10 区色图。注意色块**贴着衣物轮廓走**，不是画方框：
+
+<table>
+<tr>
+<th align="center">① 原图（要复刻的那张）</th>
+<th align="center">② 色图（10 区，每区一句文案）</th>
+</tr>
+<tr>
+<td><img src="examples/SOP-3-20261112-四星2-standing-split/01-transition/ex3_t_00001_.png" width="300"></td>
+<td><img src="examples/SOP-3-20261112-四星2-standing-split/02-colormap/ex3_cm.png" width="300"></td>
+</tr>
+</table>
 
 色图四条画法（每条都有实测）：
 
