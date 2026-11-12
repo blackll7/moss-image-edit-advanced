@@ -31,7 +31,7 @@
    │                                      [1] 纯 T2I 过渡图
    │                                         只传 --depth-map
    │                                          control 0.6 / end 0.6
-   │                                         prompt 用英文色名
+   │                                         prompt 用人工指定的高区分度色名（⚠ 不用参考图配色）
    │                                         深度图轮廓偏窄时，必须在 prompt
    │                                         里写出服装的实际宽度
    │                                               │
@@ -245,19 +245,58 @@ standing on her right leg on the ground … one foot planted flat on the floor, 
 ```
 
 ### prompt 写法
-**用英文色名，不用 hex**。MOSS 把英文色名当填色指令，hex 只当区域 ID。
+
+**这一步的颜色是「工作色」，不是「成品色」。** 唯一目的是让第 2 步能按颜色把区域干净地切出来，所以**必须人工指定、必须彼此拉得开、必须离参考图配色远**。
+
+#### 两条硬规则
+
+**规则 1：不要用参考图的真实配色。**
+
+参考图是冰蓝（`#9fe8e0`）+ 深海军蓝（`#203060`）+ 金色（`#d4a73a`）——照抄会有三个后果：
+
+| 后果 | 具体表现 |
+|---|---|
+| 同色系部位切不开 | `veil` 与 `orb` 最小色差只有 **57.8**，阈值放到 60 就互相吞 |
+| 阈值必须收得极窄 | 稍带阴影就误判，`shoes` 的 bbox 会横跨全宽、与掩码交集 0.0% |
+| **污染第 3 步** | 过渡图与参考图撞色，A+B 精修时模型分不清「这是配色指令」还是「这是参考色」 |
+
+**规则 2：用标准色名 + 记录 RGB 参考值。**
+
+「定量化」的意思是：**色名要选得足够标准、足够纯，并且在文档里把它的 RGB 记下来当阈值目标**。
+
+- ✓ `deep green` —— 标准、纯、离参考远，阈值目标 `[46,139,58]` 明确
+- ✗ `a cool pale icy blue` —— 模糊、接近参考配色、RGB 无唯一解
+- ✗ `#2e8b3a` 写进 prompt —— **hex 会被当区域 ID 标记，不是填色指令**
+
+#### 工作色表（本工作区现用，两两最小色差 57.8）
+
+| 部位 | 色名（写进 prompt） | RGB 参考（第 2 步的阈值目标） | hex |
+|---|---|---|---|
+| legs | `deep green` | 46, 139, 58 | `#2e8b3a` |
+| drape | `crimson red` | 176, 42, 60 | `#b02a3c` |
+| sash | `orange` | 232, 120, 30 | `#e8781e` |
+| bodice | `violet` | 139, 75, 181 | `#8b4bb5` |
+| sleeve_r | `sky blue` | 62, 155, 224 | `#3e9be0` |
+| sleeve_l | `navy blue` | 32, 48, 96 | `#203060` |
+| veil | `pale turquoise` | 159, 232, 224 | `#9fe8e0` |
+| orb | `silver` | 184, 188, 196 | `#b8bcc4` |
+| hair | `golden yellow` | 212, 167, 58 | `#d4a73a` |
+| shoes | `hot pink` | 224, 74, 150 | `#e04a96` |
+| sash_point | `dark brown` | 90, 58, 42 | `#5a3a2a` |
+
+**色差下限 55**。要加新部位时，先用 RGB 曼哈顿距离核一遍全表，低于 55 就换色。
+
+#### prompt 片段（照抄，只换色名）
 
 ```
-a woman kneeling on the ground, both arms lowered and pressing down to the sides,
-upper body leaning forward, full body in frame, plain flat white background,
-hand-drawn anime illustration with clean lineart and flat cel shading.
-
 She wears solid opaque clothing in clearly separated flat colours. Her trousers are
 wide loose harem pants in deep green: ballooning out from the hips into a rounded
 barrel shape, staying wide and puffy all the way down the thigh and calf, never
 hugging the legs, packed with volume and deep cloth folds, gathered tight only at
 the ankle cuff. A long cape hangs from her left hip down to the floor in crimson red. ...
 ```
+
+**`in <色名>` 这个句式必须在**——它同时起两个作用：告诉模型填什么色，让第 2 步知道去哪找。
 
 **关键三句，作用是「把衣服的实际宽度写出来」**：
 - `ballooning out from the hips into a rounded barrel shape` —— 给出整体宽度轮廓
@@ -271,7 +310,7 @@ the ankle cuff. A long cape hangs from her left hip down to the floor in crimson
 ### 检查点
 - 姿势与深度图一致（跪姿：双臂下压、双膝着地、上身前倾）
 - **裤子有明显鼓包**，不是直筒
-- 11 种颜色**全部对上**（用 `hot pink` / `crimson red` / `deep green` 这种标准色名比 hex 稳）
+- 11 种颜色**全部对上工作色表**（`hot pink` / `crimson red` / `deep green` 比 hex 稳）；**对不上就停，别带着错色进第 2 步**
 
 ---
 
@@ -288,7 +327,8 @@ K = 14
 # 30–40 轮迭代，按占比排序打印
 ```
 
-**再按目标色距离分割**：
+**再按目标色距离分割**。`T` 就是第 1 步那张**工作色表**——`srcs` 取 RGB 参考值，`hexv` 取表中 hex。**不要用参考图的真实配色当 `T`**（见第 1 步两条硬规则）：
+
 ```python
 for name, srcs, hexv in T:
     cols = np.array(srcs, np.float32)

@@ -97,7 +97,15 @@ def main():
     ap.add_argument("--pad", type=float, default=0.04, help="裁剪时四周留的归一化边距")
     ap.add_argument("--describe", action="store_true")
     ap.add_argument("--only", default="", help="逗号分隔的 id，只跑这几个")
+    ap.add_argument("--phrases-file", default="",
+                    help="JSON 文件，覆盖内置 PHRASES（换一套服装时必须给，内置的是四星2 那套）")
     args = ap.parse_args()
+
+    phrases = dict(PHRASES)
+    if args.phrases_file:
+        with open(args.phrases_file, encoding="utf-8") as fh:
+            phrases = json.load(fh)          # 替换，不是合并：换服装时内置那套会瞎定位
+        print("部位表来源 %s（%d 项，替换内置）" % (args.phrases_file, len(phrases)))
 
     key = load_key()
     img = Image.open(args.image).convert("RGB")
@@ -105,11 +113,12 @@ def main():
     os.makedirs(args.outdir, exist_ok=True)
     print("图 %dx%d  输出 %s" % (W, H, args.outdir))
 
-    ids = [s.strip() for s in args.only.split(",") if s.strip()] or list(PHRASES)
+    ids = [s.strip() for s in args.only.split(",") if s.strip()] or list(phrases)
+
     results = []
 
     for rid in ids:
-        phrase = PHRASES[rid]
+        phrase = phrases[rid]
         b64 = base64.b64encode(open(args.image, "rb").read()).decode()
         prompt = (
             "请在这张图中定位「%s」。\n"
