@@ -9,6 +9,7 @@
 # 先忽略全部，再靠末尾的 ! 逐条放行（比黑名单更不容易漏）
 /*
 !/README.md
+!/README.zh.md
 !/.gitignore
 !/.gitattributes
 !/LICENSE
