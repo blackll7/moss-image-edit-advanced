@@ -619,4 +619,24 @@ MIT —— 见 [`LICENSE`](LICENSE)。
 
 ---
 
+## 仓库标签（GitHub Topics）
+
+填在仓库 About 旁边的 Topics 栏里。十个：
+
+```
+moss-image  comfyui  image-generation  reference-image  regional-prompting
+pose-transfer  controlnet  depth-map  inpainting  diffusion-workflow
+```
+
+对应的 About 描述（350 字符上限，294 字符）：
+
+```
+Two advanced tools for MOSS-Image that supersede plain image-edit and bbox
+layout: GrabTag pins named reference crops to canvas regions, region prompts
+caption each region separately. Three SOPs included as walkthroughs. No LoRA
+or adapter to load - more freedom, steeper curve, higher ceiling.
+```
+
+---
+
 *本文档里的示例图都来自 `examples/` 下的真实运行产物，不是示意图。*
