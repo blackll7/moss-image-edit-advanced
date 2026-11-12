@@ -1,0 +1,312 @@
+[
+ {
+  "id": "hair",
+  "label": "hair",
+  "trunk": "A long, thick blonde braid of synthetic-looking hair with a smooth, glossy finish and a tight cylindrical silhouette.",
+  "details": [
+   "Three visible blue teardrop-shaped gems set in silver-toned metal, embedded along the outer curve of the braid near the crown; one fully visible, two partially visible",
+   "Small silver-toned metallic beads spaced intermittently along the braid’s length, round in shape, approximately 5–6 visible on the upper half",
+   "Thin gold-toned wire wrapping coiled around the braid at intervals, forming subtle spiral bands, 3 full wraps visible near the top",
+   "A single strand of fine silver chain draped loosely over the braid’s surface, partially obscured by hair strands, extending from crown toward shoulder",
+   "Tiny clear faceted crystals embedded in the braid’s surface near the temple area, irregularly shaped, about 4 visible in the crop"
+  ],
+  "bbox_px": [
+   377,
+   14,
+   646,
+   361
+  ],
+  "bbox_abs": [
+   -802,
+   -231,
+   -455,
+   38
+  ],
+  "crop": "E:/DSH-MOSS工作区/examples/SOP-1-20261112-四星2冰蓝舞娘/01-parts/crops/hair.png",
+  "area_pct": 4.7,
+  "raw": "{\"trunk\": \"A long, thick blonde braid of synthetic-looking hair with a smooth, glossy finish and a tight cylindrical silhouette.\", \"details\": [\"Three visible blue teardrop-shaped gems set in silver-toned metal, embedded along the outer curve of the braid near the crown; one fully visible, two partially visible\", \"Small silver-toned metallic beads spaced intermittently along the braid’s length, round in shape, approximately 5–6 visible on the upper half\", \"Thin gold-toned wire wrapping coiled around the braid at intervals, forming subtle spiral bands, 3 full wraps visible near the top\", \"A single strand of fine silver chain draped loosely over the braid’s surface, partially obscured by hair strands, extending from crown toward shoulder\", \"Tiny clear faceted crystals embedded in the braid’s surface near the temple area, irregularly shaped, about 4 visible in the crop\"]}"
+ },
+ {
+  "id": "veil",
+  "label": "veil",
+  "trunk": "A sheer pale lavender cloth draped over the head and shoulders, forming a loose, open-fronted halter silhouette.",
+  "details": [
+   "Translucent lavender fabric with soft drape, covering upper chest and shoulders, extending from neck to mid-bust; one continuous piece.",
+   "Delicate gold-toned metal chain suspending teardrop-shaped clear crystals and small amber beads, hanging vertically from central bust ornament; five visible strands, each ending near navel.",
+   "Central ornate gold filigree medallion at sternum, set with square-cut purple and clear gems in mosaic pattern; one, fully visible.",
+   "Sheer fabric edges finished with fine gold-threaded hem, following neckline and armhole contours; continuous trim, partially visible on left shoulder.",
+   "Two small dangling pearl-like beads on thin gold wires attached to upper chest fabric near collarbone; two, symmetrically placed, fully visible."
+  ],
+  "bbox_px": [
+   376,
+   249,
+   676,
+   561
+  ],
+  "bbox_abs": [
+   -567,
+   -232,
+   -255,
+   68
+  ],
+  "crop": "E:/DSH-MOSS工作区/examples/SOP-1-20261112-四星2冰蓝舞娘/01-parts/crops/veil.png",
+  "area_pct": 4.72,
+  "raw": "{\"trunk\": \"A sheer pale lavender cloth draped over the head and shoulders, forming a loose, open-fronted halter silhouette.\", \"details\": [\"Translucent lavender fabric with soft drape, covering upper chest and shoulders, extending from neck to mid-bust; one continuous piece.\", \"Delicate gold-toned metal chain suspending teardrop-shaped clear crystals and small amber beads, hanging vertically from central bust ornament; five visible strands, each ending near navel.\", \"Central ornate gold filigree medallion at sternum, set with square-cut purple and clear gems in mosaic pattern; one, fully visible.\", \"Sheer fabric edges finished with fine gold-threaded hem, following neckline and armhole contours; continuous trim, partially visible on left shoulder.\", \"Two small dangling pearl-like beads on thin gold wires attached to upper chest fabric near collarbone; two, symmetrically placed, fully visible.\"]}"
+ },
+ {
+  "id": "sleeve_r",
+  "label": "sleeve_r",
+  "trunk": "A wide, pale-blue sleeve made of sheer fabric with a puffed, gathered silhouette.",
+  "details": [
+   "Square quilted panels in medium blue satin, diamond-shaped, eight fully visible plus one partial, covering the main body of the sleeve",
+   "Gold metallic trim outlining each quilted panel, thin and continuous, following panel edges",
+   "Small white pearl-like beads at panel intersections, round and opaque, nine visible (eight full, one partial), placed at quilt seam crossings",
+   "Gold braided armband at upper sleeve edge, woven metal thread, one, encircling the bicep area",
+   "Translucent white lace overlay on inner forearm section, floral pattern, partially visible, beneath quilted layer",
+   "Silver-toned chain links attached to gold armband, fine metal, three visible segments, hanging from outer side of armband"
+  ],
+  "bbox_px": [
+   184,
+   301,
+   451,
+   610
+  ],
+  "bbox_abs": [
+   -515,
+   -424,
+   -206,
+   -157
+  ],
+  "crop": "E:/DSH-MOSS工作区/examples/SOP-1-20261112-四星2冰蓝舞娘/01-parts/crops/sleeve_r.png",
+  "area_pct": 4.16,
+  "raw": "{\"trunk\": \"A wide, pale-blue sleeve made of sheer fabric with a puffed, gathered silhouette.\", \"details\": [\"Square quilted panels in medium blue satin, diamond-shaped, eight fully visible plus one partial, covering the main body of the sleeve\", \"Gold metallic trim outlining each quilted panel, thin and continuous, following panel edges\", \"Small white pearl-like beads at panel intersections, round and opaque, nine visible (eight full, one partial), placed at quilt seam crossings\", \"Gold braided armband at upper sleeve edge, woven metal thread, one, encircling the bicep area\", \"Translucent white lace overlay on inner forearm section, floral pattern, partially visible, beneath quilted layer\", \"Silver-toned chain links attached to gold armband, fine metal, three visible segments, hanging from outer side of armband\"]}"
+ },
+ {
+  "id": "sleeve_l",
+  "label": "sleeve_l",
+  "trunk": "A wide, light-blue sleeve made of semi-sheer fabric with a puffed, gathered silhouette.",
+  "details": [
+   "Square quilted panels in medium and dark blue satin, diamond-shaped, 6 fully visible plus 2 partial, arranged in a grid across the sleeve body",
+   "Gold metallic trim outlining each quilted panel, thin linear, continuous, following panel edges",
+   "Small white pearl-like beads at panel intersections, spherical, 5 fully visible plus 3 partial, placed at corners where seams meet",
+   "Gold braided cord wrapped around upper arm just below shoulder, twisted rope-like, one continuous band, partially visible at top edge",
+   "Sheer overlay fabric in light blue, slightly translucent, covering quilted base, visible as subtle texture and layering"
+  ],
+  "bbox_px": [
+   184,
+   300,
+   451,
+   610
+  ],
+  "bbox_abs": [
+   -516,
+   -424,
+   -206,
+   -157
+  ],
+  "crop": "E:/DSH-MOSS工作区/examples/SOP-1-20261112-四星2冰蓝舞娘/01-parts/crops/sleeve_l.png",
+  "area_pct": 4.17,
+  "raw": "{\"trunk\": \"A wide, light-blue sleeve made of semi-sheer fabric with a puffed, gathered silhouette.\", \"details\": [\"Square quilted panels in medium and dark blue satin, diamond-shaped, 6 fully visible plus 2 partial, arranged in a grid across the sleeve body\", \"Gold metallic trim outlining each quilted panel, thin linear, continuous, following panel edges\", \"Small white pearl-like beads at panel intersections, spherical, 5 fully visible plus 3 partial, placed at corners where seams meet\", \"Gold braided cord wrapped around upper arm just below shoulder, twisted rope-like, one continuous band, partially visible at top edge\", \"Sheer overlay fabric in light blue, slightly translucent, covering quilted base, visible as subtle texture and layering\"]}"
+ },
+ {
+  "id": "bodice",
+  "label": "bodice",
+  "trunk": "A sheer, light-blue and dark-blue jewelled bustier with a structured, symmetrical silhouette.",
+  "details": [
+   "Central ornate metalwork motif in gold-tone, featuring a large teardrop-cut clear gem at apex, flanked by two smaller purple gems, positioned at sternum center",
+   "Two symmetrical mosaic panels on upper chest, each composed of small square-cut purple and white gems in gold-tone settings, one on each side of central motif",
+   "Four dangling chains from lower edge of bustier: two longer chains with clear teardrop gems and gold pendants, two shorter chains with small red teardrop gems, all hanging over abdomen",
+   "Sheer light-blue fabric overlay draped across shoulders and down front, semi-transparent, covering upper chest and extending to waistline",
+   "Gold-tone trim outlining bustier edges and armholes, continuous and smooth, visible along top and side contours",
+   "Two small dangling pearl-like beads on thin gold chains attached to shoulder straps, one on each strap, partially visible at top corners",
+   "Horizontal band of small clear round gems across upper bust line, embedded in gold-tone setting, spanning width of bustier just below neckline"
+  ],
+  "bbox_px": [
+   376,
+   238,
+   676,
+   545
+  ],
+  "bbox_abs": [
+   -578,
+   -232,
+   -271,
+   68
+  ],
+  "crop": "E:/DSH-MOSS工作区/examples/SOP-1-20261112-四星2冰蓝舞娘/01-parts/crops/bodice.png",
+  "area_pct": 4.64,
+  "raw": "{\"trunk\": \"A sheer, light-blue and dark-blue jewelled bustier with a structured, symmetrical silhouette.\", \"details\": [\"Central ornate metalwork motif in gold-tone, featuring a large teardrop-cut clear gem at apex, flanked by two smaller purple gems, positioned at sternum center\", \"Two symmetrical mosaic panels on upper chest, each composed of small square-cut purple and white gems in gold-tone settings, one on each side of central motif\", \"Four dangling chains from lower edge of bustier: two longer chains with clear teardrop gems and gold pendants, two shorter chains with small red teardrop gems, all hanging over abdomen\", \"Sheer light-blue fabric overlay draped across shoulders and down front, semi-transparent, covering upper chest and extending to waistline\", \"Gold-tone trim outlining bustier edges and armholes, continuous and smooth, visible along top and side contours\", \"Two small dangling pearl-like beads on thin gold chains attached to shoulder straps, one on each strap, partially visible at top corners\", \"Horizontal band of small clear round gems across upper bust line, embedded in gold-tone setting, spanning width of bustier just below neckline\"]}"
+ },
+ {
+  "id": "sash",
+  "label": "sash",
+  "trunk": "A wide, deep blue satin waistband with a slightly gathered, draped silhouette.",
+  "details": [
+   "Four large diamond-shaped appliqués in iridescent blue sequins with gold trim, arranged symmetrically across the front center",
+   "Two rows of small white pearl-like beads strung along the upper and lower edges of the band, continuous and fully visible",
+   "Three dangling gold chains with teardrop-shaped clear crystal pendants, hanging from the lower edge at center and两侧 (left and right, partially visible)",
+   "One central gold filigree motif with a starburst shape and embedded clear rhinestones, positioned at the apex of the upper edge",
+   "Two partial gold chain loops with small amber-colored bead accents, visible on far left and far right edges only",
+   "One horizontal gold wire frame supporting the upper row of appliqués, visible beneath the sequins as a thin metallic outline"
+  ],
+  "bbox_px": [
+   347,
+   509,
+   687,
+   804
+  ],
+  "bbox_abs": [
+   -307,
+   -261,
+   -12,
+   79
+  ],
+  "crop": "E:/DSH-MOSS工作区/examples/SOP-1-20261112-四星2冰蓝舞娘/01-parts/crops/sash.png",
+  "area_pct": 5.05,
+  "raw": "{\"trunk\": \"A wide, deep blue satin waistband with a slightly gathered, draped silhouette.\", \"details\": [\"Four large diamond-shaped appliqués in iridescent blue sequins with gold trim, arranged symmetrically across the front center\", \"Two rows of small white pearl-like beads strung along the upper and lower edges of the band, continuous and fully visible\", \"Three dangling gold chains with teardrop-shaped clear crystal pendants, hanging from the lower edge at center and两侧 (left and right, partially visible)\", \"One central gold filigree motif with a starburst shape and embedded clear rhinestones, positioned at the apex of the upper edge\", \"Two partial gold chain loops with small amber-colored bead accents, visible on far left and far right edges only\", \"One horizontal gold wire frame supporting the upper row of appliqués, visible beneath the sequins as a thin metallic outline\"]}"
+ },
+ {
+  "id": "orb",
+  "label": "orb",
+  "trunk": "A small round ornament in silver-toned metal with a domed silhouette and multi-coloured gem inlays.",
+  "details": [
+   "Faceted clear and lavender crystals set in silver-toned metal, star-shaped and hexagonal, 7 fully visible plus 2 partially visible, arranged in a symmetrical radial pattern on the dome surface",
+   "Gold-toned metal filigree framework, openwork scroll design, 1 continuous band encircling the equator of the ornament",
+   "Small dangling tassel of pale peach silk threads, 1, suspended from a gold-toned ring at the bottom apex",
+   "Gold-toned chain link attachment, 1 short segment visible, connecting top of ornament to upper garment hardware",
+   "Blue enamel or painted panel segments, glossy finish, irregular curved shapes, 3 visible between crystal clusters on lower half",
+   "Silver-toned metallic base cap, smooth hemispherical, 1, covering the bottom mounting point beneath the tassel ring"
+  ],
+  "bbox_px": [
+   275,
+   699,
+   461,
+   921
+  ],
+  "bbox_abs": [
+   -117,
+   -333,
+   105,
+   -147
+  ],
+  "crop": "E:/DSH-MOSS工作区/examples/SOP-1-20261112-四星2冰蓝舞娘/01-parts/crops/orb.png",
+  "area_pct": 2.08,
+  "raw": "{\"trunk\": \"A small round ornament in silver-toned metal with a domed silhouette and multi-coloured gem inlays.\", \"details\": [\"Faceted clear and lavender crystals set in silver-toned metal, star-shaped and hexagonal, 7 fully visible plus 2 partially visible, arranged in a symmetrical radial pattern on the dome surface\", \"Gold-toned metal filigree framework, openwork scroll design, 1 continuous band encircling the equator of the ornament\", \"Small dangling tassel of pale peach silk threads, 1, suspended from a gold-toned ring at the bottom apex\", \"Gold-toned chain link attachment, 1 short segment visible, connecting top of ornament to upper garment hardware\", \"Blue enamel or painted panel segments, glossy finish, irregular curved shapes, 3 visible between crystal clusters on lower half\", \"Silver-toned metallic base cap, smooth hemispherical, 1, covering the bottom mounting point beneath the tassel ring\"]}"
+ },
+ {
+  "id": "drape",
+  "label": "drape",
+  "trunk": "A long, dark blue fabric panel with a flowing, layered silhouette and a satin-like sheen.",
+  "details": [
+   "Gold metallic trim outlining scalloped hem edges, continuous along lower border",
+   "Three visible teardrop-shaped blue faceted gems set in gold bezels, aligned vertically near hem",
+   "One partially visible diamond-shaped blue gem inset within upper gold trim, left side",
+   "Two small gold cross-shaped metal ornaments on vertical gold chain links, hanging from mid-panel",
+   "One incomplete gold chain with dangling element, visible only at bottom right corner",
+   "Gold embroidered linear motifs forming vertical lines, two full and one partial on left side",
+   "One large blue gem partially obscured behind overlapping fabric layer, upper left"
+  ],
+  "bbox_px": [
+   162,
+   909,
+   447,
+   1602
+  ],
+  "bbox_abs": [
+   93,
+   -446,
+   786,
+   -161
+  ],
+  "crop": "E:/DSH-MOSS工作区/examples/SOP-1-20261112-四星2冰蓝舞娘/01-parts/crops/drape.png",
+  "area_pct": 9.95,
+  "raw": "{\"trunk\": \"A long, dark blue fabric panel with a flowing, layered silhouette and a satin-like sheen.\", \"details\": [\"Gold metallic trim outlining scalloped hem edges, continuous along lower border\", \"Three visible teardrop-shaped blue faceted gems set in gold bezels, aligned vertically near hem\", \"One partially visible diamond-shaped blue gem inset within upper gold trim, left side\", \"Two small gold cross-shaped metal ornaments on vertical gold chain links, hanging from mid-panel\", \"One incomplete gold chain with dangling element, visible only at bottom right corner\", \"Gold embroidered linear motifs forming vertical lines, two full and one partial on left side\", \"One large blue gem partially obscured behind overlapping fabric layer, upper left\"]}"
+ },
+ {
+  "id": "sash_point",
+  "label": "sash_point",
+  "trunk": "A short, dark navy velvet strip hanging vertically in front of the waist.",
+  "details": [
+   "Three large faceted blue gemstones set in gold-toned metal frames, diamond-shaped, arranged horizontally across the upper edge of the strip",
+   "Two dangling teardrop-shaped clear crystal pendants suspended from gold chains, hanging below the central gemstone",
+   "One ornate gold chain with alternating small round beads and tiny star-shaped links, draped across the mid-section of the strip",
+   "One partial star-shaped metallic appliqué in silver tone with blue enamel accents, visible on the right side edge (partly cut off)",
+   "Fine gold thread embroidery outlining the lower hem of the strip, forming a subtle scalloped edge (partially visible)"
+  ],
+  "bbox_px": [
+   353,
+   516,
+   686,
+   867
+  ],
+  "bbox_abs": [
+   -300,
+   -255,
+   51,
+   78
+  ],
+  "crop": "E:/DSH-MOSS工作区/examples/SOP-1-20261112-四星2冰蓝舞娘/01-parts/crops/sash_point.png",
+  "area_pct": 5.89,
+  "raw": "{\"trunk\": \"A short, dark navy velvet strip hanging vertically in front of the waist.\", \"details\": [\"Three large faceted blue gemstones set in gold-toned metal frames, diamond-shaped, arranged horizontally across the upper edge of the strip\", \"Two dangling teardrop-shaped clear crystal pendants suspended from gold chains, hanging below the central gemstone\", \"One ornate gold chain with alternating small round beads and tiny star-shaped links, draped across the mid-section of the strip\", \"One partial star-shaped metallic appliqué in silver tone with blue enamel accents, visible on the right side edge (partly cut off)\", \"Fine gold thread embroidery outlining the lower hem of the strip, forming a subtle scalloped edge (partially visible)\"]}"
+ },
+ {
+  "id": "legs",
+  "label": "legs",
+  "trunk": "Wide loose trousers in gradient light-to-medium blue sheer fabric with a voluminous, ankle-length silhouette.",
+  "details": [
+   "Gold-thread vertical stripes, thin and straight, running full length down each leg, approximately 6 per leg visible",
+   "Diamond-shaped embroidered panels, silver-gold metallic thread on light blue ground, outlined in gold, 4 fully visible per leg plus partials",
+   "Floral motifs with central clear faceted gems, silver-gold embroidery with blue accents, star-like petals, 3 fully visible per leg",
+   "Blue satin trim bands, solid deep blue, triangular cut at hem openings, 2 per leg at ankle cuffs",
+   "Hanging tassel, peach-coloured silk threads, single, attached to left hip ornament (partially visible)",
+   "Chain-and-gem pendant cluster, gold chains with teardrop clear crystals, suspended from waistband left side, partially visible",
+   "Geometric border pattern, gold and silver thread, interlocking angular lines, framing lower leg panels, continuous along hem edge",
+   "Sheer overlay with subtle ombre wash, light sky blue fading to deeper blue at hem, uniform across both legs"
+  ],
+  "bbox_px": [
+   298,
+   666,
+   776,
+   1376
+  ],
+  "bbox_abs": [
+   -150,
+   -310,
+   560,
+   168
+  ],
+  "crop": "E:/DSH-MOSS工作区/examples/SOP-1-20261112-四星2冰蓝舞娘/01-parts/crops/legs.png",
+  "area_pct": 17.1,
+  "raw": "{\"trunk\": \"Wide loose trousers in gradient light-to-medium blue sheer fabric with a voluminous, ankle-length silhouette.\", \"details\": [\"Gold-thread vertical stripes, thin and straight, running full length down each leg, approximately 6 per leg visible\", \"Diamond-shaped embroidered panels, silver-gold metallic thread on light blue ground, outlined in gold, 4 fully visible per leg plus partials\", \"Floral motifs with central clear faceted gems, silver-gold embroidery with blue accents, star-like petals, 3 fully visible per leg\", \"Blue satin trim bands, solid deep blue, triangular cut at hem openings, 2 per leg at ankle cuffs\", \"Hanging tassel, peach-coloured silk threads, single, attached to left hip ornament (partially visible)\", \"Chain-and-gem pendant cluster, gold chains with teardrop clear crystals, suspended from waistband left side, partially visible\", \"Geometric border pattern, gold and silver thread, interlocking angular lines, framing lower leg panels, continuous along hem edge\", \"Sheer overlay with subtle ombre wash, light sky blue fading to deeper blue at hem, uniform across both legs\"]}"
+ },
+ {
+  "id": "shoes",
+  "label": "shoes",
+  "trunk": "Pointed-toe shoes in blue and grey fabric with a glossy finish and slender silhouette.",
+  "details": [
+   "Gold-tone metal toe cap with raised diamond-shaped inset, one per shoe, centered on the pointed tip",
+   "Blue fabric triangular panel at toe, one per shoe, covering the front quarter",
+   "Gold-tone ankle chain with dangling pendant, one per ankle, wrapped around the instep",
+   "Pendant: teardrop-shaped clear gem set in gold-tone frame, one per chain, hanging below ankle",
+   "Gold-tone ornamental band across mid-foot, one per shoe, encircling the arch",
+   "Three small oval brown gems on side of left shoe’s ankle band, only partly visible",
+   "Two layered gold-tone bangles on left ankle, stacked above the chain, only partly visible",
+   "Stitched seam detail in gold thread along edge of blue toe panel, continuous, visible on both shoes"
+  ],
+  "bbox_px": [
+   403,
+   1261,
+   706,
+   1617
+  ],
+  "bbox_abs": [
+   445,
+   -205,
+   801,
+   98
+  ],
+  "crop": "E:/DSH-MOSS工作区/examples/SOP-1-20261112-四星2冰蓝舞娘/01-parts/crops/shoes.png",
+  "area_pct": 5.44,
+  "raw": "{\"trunk\": \"Pointed-toe shoes in blue and grey fabric with a glossy finish and slender silhouette.\", \"details\": [\"Gold-tone metal toe cap with raised diamond-shaped inset, one per shoe, centered on the pointed tip\", \"Blue fabric triangular panel at toe, one per shoe, covering the front quarter\", \"Gold-tone ankle chain with dangling pendant, one per ankle, wrapped around the instep\", \"Pendant: teardrop-shaped clear gem set in gold-tone frame, one per chain, hanging below ankle\", \"Gold-tone ornamental band across mid-foot, one per shoe, encircling the arch\", \"Three small oval brown gems on side of left shoe’s ankle band, only partly visible\", \"Two layered gold-tone bangles on left ankle, stacked above the chain, only partly visible\", \"Stitched seam detail in gold thread along edge of blue toe panel, continuous, visible on both shoes\"]}"
+ }
+]

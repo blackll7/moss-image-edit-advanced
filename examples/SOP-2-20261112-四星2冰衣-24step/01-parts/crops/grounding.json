@@ -1,0 +1,244 @@
+[
+  {
+    "id": "hair",
+    "phrase": "the long blonde hair in a thick braid",
+    "box_2d": [
+      341,
+      8,
+      501,
+      190
+    ],
+    "pixel_box": [
+      366,
+      0,
+      657,
+      375
+    ],
+    "size": [
+      291,
+      375
+    ],
+    "crop": "E:/DSH-MOSS工作区/examples/SOP-2-20261112-四星2冰衣-24step/01-parts/crops/hair.png",
+    "description": ""
+  },
+  {
+    "id": "veil",
+    "phrase": "the sheer pale cloth draped over the head and shoulders",
+    "box_2d": [
+      340,
+      185,
+      526,
+      312
+    ],
+    "pixel_box": [
+      364,
+      236,
+      688,
+      574
+    ],
+    "size": [
+      324,
+      338
+    ],
+    "crop": "E:/DSH-MOSS工作区/examples/SOP-2-20261112-四星2冰衣-24step/01-parts/crops/veil.png",
+    "description": ""
+  },
+  {
+    "id": "sleeve_r",
+    "phrase": "the wide pale-blue sleeve on the right upper arm",
+    "box_2d": [
+      183,
+      217,
+      340,
+      342
+    ],
+    "pixel_box": [
+      173,
+      288,
+      462,
+      623
+    ],
+    "size": [
+      289,
+      335
+    ],
+    "crop": "E:/DSH-MOSS工作区/examples/SOP-2-20261112-四星2冰衣-24step/01-parts/crops/sleeve_r.png",
+    "description": ""
+  },
+  {
+    "id": "sleeve_l",
+    "phrase": "the wide blue sleeve on the left upper arm",
+    "box_2d": [
+      183,
+      217,
+      340,
+      342
+    ],
+    "pixel_box": [
+      173,
+      288,
+      462,
+      623
+    ],
+    "size": [
+      289,
+      335
+    ],
+    "crop": "E:/DSH-MOSS工作区/examples/SOP-2-20261112-四星2冰衣-24step/01-parts/crops/sleeve_l.png",
+    "description": ""
+  },
+  {
+    "id": "bodice",
+    "phrase": "the small jewelled top covering only the chest",
+    "box_2d": [
+      340,
+      175,
+      526,
+      302
+    ],
+    "pixel_box": [
+      364,
+      220,
+      688,
+      558
+    ],
+    "size": [
+      324,
+      338
+    ],
+    "crop": "E:/DSH-MOSS工作区/examples/SOP-2-20261112-四星2冰衣-24step/01-parts/crops/bodice.png",
+    "description": ""
+  },
+  {
+    "id": "sash",
+    "phrase": "the wide decorated band wrapped around the waist",
+    "box_2d": [
+      314,
+      345,
+      536,
+      427
+    ],
+    "pixel_box": [
+      333,
+      497,
+      700,
+      762
+    ],
+    "size": [
+      367,
+      265
+    ],
+    "crop": "E:/DSH-MOSS工作区/examples/SOP-2-20261112-四星2冰衣-24step/01-parts/crops/sash.png",
+    "description": ""
+  },
+  {
+    "id": "orb",
+    "phrase": "the small round silver ornament hanging at the left hip",
+    "box_2d": [
+      260,
+      461,
+      345,
+      531
+    ],
+    "pixel_box": [
+      267,
+      687,
+      468,
+      931
+    ],
+    "size": [
+      201,
+      244
+    ],
+    "crop": "E:/DSH-MOSS工作区/examples/SOP-2-20261112-四星2冰衣-24step/01-parts/crops/orb.png",
+    "description": ""
+  },
+  {
+    "id": "drape",
+    "phrase": "the long dark blue cloth panel hanging from the left hip down past the knee",
+    "box_2d": [
+      164,
+      579,
+      340,
+      999
+    ],
+    "pixel_box": [
+      150,
+      879,
+      462,
+      1632
+    ],
+    "size": [
+      312,
+      753
+    ],
+    "crop": "E:/DSH-MOSS工作区/examples/SOP-2-20261112-四星2冰衣-24step/01-parts/crops/drape.png",
+    "description": ""
+  },
+  {
+    "id": "sash_point",
+    "phrase": "the short dark strip hanging in front of the waist",
+    "box_2d": [
+      319,
+      347,
+      536,
+      502
+    ],
+    "pixel_box": [
+      339,
+      501,
+      700,
+      884
+    ],
+    "size": [
+      361,
+      383
+    ],
+    "crop": "E:/DSH-MOSS工作区/examples/SOP-2-20261112-四星2冰衣-24step/01-parts/crops/sash_point.png",
+    "description": ""
+  },
+  {
+    "id": "legs",
+    "phrase": "the wide loose trousers covering both legs down to the ankles",
+    "box_2d": [
+      269,
+      430,
+      615,
+      822
+    ],
+    "pixel_box": [
+      278,
+      636,
+      796,
+      1406
+    ],
+    "size": [
+      518,
+      770
+    ],
+    "crop": "E:/DSH-MOSS工作区/examples/SOP-2-20261112-四星2冰衣-24step/01-parts/crops/legs.png",
+    "description": ""
+  },
+  {
+    "id": "shoes",
+    "phrase": "the pointed shoes on the feet",
+    "box_2d": [
+      361,
+      804,
+      552,
+      999
+    ],
+    "pixel_box": [
+      390,
+      1246,
+      719,
+      1632
+    ],
+    "size": [
+      329,
+      386
+    ],
+    "crop": "E:/DSH-MOSS工作区/examples/SOP-2-20261112-四星2冰衣-24step/01-parts/crops/shoes.png",
+    "description": ""
+  }
+]

@@ -1,0 +1,64 @@
+# ============================================================
+# 本仓库只收录三类内容，其余一律忽略：
+#   一、GrabTag 相关的全部执行文件
+#   二、region prompt 相关的全部执行文件
+#   三、三个 SOP 及其样本
+# 白名单在文件末尾，前面是「排除一切大件与中间产物」。
+# ============================================================
+
+# 先忽略全部，再靠末尾的 ! 逐条放行（比黑名单更不容易漏）
+/*
+!/README.md
+!/.gitignore
+!/LICENSE
+!/tools/
+!/notes/
+!/examples/
+
+# ---- 目录内再全忽略，只放行指定文件 ----
+/tools/*
+!/tools/extract_colormap.py
+!/tools/ground_regions.py
+!/tools/describe_crops.py
+!/tools/describe_parts.py
+!/tools/describe_subzones.py
+!/tools/region_ask.py
+!/tools/bbox_to_layout.py
+!/tools/parts_to_layout.py
+!/tools/pick_parts.py
+!/tools/depth_to_mask.py
+!/tools/clean_depth.py
+!/tools/detail_colormap.py
+
+/notes/*
+!/notes/手册-GrabTag.md
+!/notes/手册-GrabTag-使用.md
+!/notes/机制-GrabTag-当前实现.md
+!/notes/机制-三个定位系统-GrabTag-layout-色图.md
+!/notes/流程-GrabTag两步生成-锁定版.md
+!/notes/2026-11-10-GrabTag-ref_tag-可见细节写法.md
+!/notes/手册-region-prompt.md
+!/notes/SOP-1-原图复刻流程.md
+!/notes/SOP-2-原图调整流程.md
+!/notes/SOP-3-更换姿势流程.md
+
+# 样本：整目录放行
+!/examples/**
+
+# ---- 兜底：任何位置都不要再收这些东西 ----
+__pycache__/
+*.pyc
+*.exe
+*.bak-*
+*.bak_*
+_bak_*
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.onnx
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store

@@ -1,0 +1,17 @@
+{
+  "picked": [
+    "legs",
+    "drape",
+    "sash_point",
+    "sash",
+    "shoes",
+    "bodice",
+    "sleeve_r"
+  ],
+  "input_dir": "C:\\MOSS-Deploy\\ComfyUI\\input",
+  "prefix": "ex1",
+  "size": [
+    1216,
+    1632
+  ]
+}

@@ -1,0 +1,5 @@
+<|style_and_lighting|>A completely blank pure white background, absolutely empty: no scenery, no floor, no cast shadow, nothing at all behind or around the figure. In front of that empty white field stands a single woman in a full-body costume, seen from the front, softly and evenly lit by plain studio light, hand-drawn anime illustration with clean lineart and flat cel shading.<|/style_and_lighting|>
+<|upper_body|>Her upper chest and bust are covered by <bodice>. Her right upper arm carries <sleeve_r>.<|/upper_body|>
+<|waist_and_hip|>Her waist is wrapped in <sash>. A short panel hangs down the front of her waist, and it is <sash_point>. A long panel hangs from her left hip down to the floor, and it is <drape>.<|/waist_and_hip|>
+<|legs|>Her legs are covered by <legs>. Her feet wear <shoes>.<|/legs|>
+<|constraints|>For every named body region, use the garment from the reference given for that region and no other. Do not draw any of these parts as separate objects beside the figure; each is worn on the body. Exactly one person appears in the whole image, standing, seen from the front, head to toe, fully inside the frame.<|/constraints|>
